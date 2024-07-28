@@ -5,7 +5,7 @@ from random import randint
 bot = Bot(command_prefix="?", self_bot=True, chunk_guilds_at_startup=False)
 
 TOKEN = "NTkwNTkyODc5NjAxMTIzMzMw.G2kquA.zDJ5J4OGoiGwyduz-gh9XnDtU7iZfDk69xBVcA"
-LOG_CHANNEL = "YOUR LOG CHANNEL ID" # OPTIONAL - Put the channel ID without quotation marks
+LOG_CHANNEL = "YOUR LOG CHANNEL ID"  # OPTIONAL - Put the channel ID without quotation marks
 CHANNEL_IDS = [1266442496867569714]
 
 @bot.event
@@ -22,8 +22,8 @@ async def auto():
                     log_channel = bot.get_channel(LOG_CHANNEL)
                     await log_channel.send(f"```Sent bump command!\nChannel ID: {channel_id}\nGuild: {channel.guild}```")
                 await channel.send("?bump")
-                await asyncio.sleep(randint(1800, 1820)) # wait after each message
-        await asyncio.sleep(randint(7200, 7220)) # wait after each round of messages
+                await asyncio.sleep(randint(1800, 1820))  # wait after each message
+        await asyncio.sleep(randint(7200, 7220))  # wait after each round of messages
 
 @bot.command()
 async def bump(ctx):
